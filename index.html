@@ -3,89 +3,273 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Liinks!</title>
+    <title>Liiinks - Directory</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            line-height: 1.6;
-        }
-        h1 {
-            color: #333;
-            text-align: center;
-        }
-        form {
-            background-color: #f9f9f9;
-            padding: 20px;
-            border-radius: 8px;
-            margin-bottom: 30px;
-        }
-        input, textarea, button {
-            display: block;
-            width: 100%;
-            margin-bottom: 15px;
-            padding: 10px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
+        * {
+            margin: 0;
+            padding: 0;
             box-sizing: border-box;
         }
-        textarea {
-            height: 100px;
-            resize: vertical;
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
         }
-        button {
-            background-color: #4CAF50;
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px 30px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+        
+        .header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+        
+        .content {
+            padding: 40px 30px;
+        }
+        
+        .embed-section {
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 30px;
+            margin-bottom: 40px;
+            border-left: 4px solid #667eea;
+        }
+        
+        .embed-section h2 {
+            color: #667eea;
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+        }
+        
+        .embed-section p {
+            margin-bottom: 20px;
+            color: #666;
+        }
+        
+        .embed-code {
+            background: #2d3748;
+            color: #e2e8f0;
+            padding: 20px;
+            border-radius: 6px;
+            font-family: 'Courier New', monospace;
+            font-size: 14px;
+            overflow-x: auto;
+            margin-bottom: 15px;
+        }
+        
+        .copy-btn {
+            background: #667eea;
             color: white;
             border: none;
+            padding: 10px 20px;
+            border-radius: 6px;
             cursor: pointer;
-            font-size: 16px;
+            font-size: 14px;
+            transition: background 0.3s;
         }
-        button:hover {
-            background-color: #45a049;
+        
+        .copy-btn:hover {
+            background: #5a67d8;
         }
-        #linkList {
-            list-style-type: none;
-            padding: 0;
+        
+        .links-section h2 {
+            color: #333;
+            margin-bottom: 25px;
+            font-size: 1.8rem;
+            text-align: center;
         }
-        #linkList li {
-            margin-bottom: 10px;
+        
+        .links-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
         }
-        #linkList a {
-            color: #0066cc;
+        
+        .link-card {
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 20px;
+            text-decoration: none;
+            color: #333;
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: 1px solid #e9ecef;
+        }
+        
+        .link-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            background: white;
+        }
+        
+        .link-card h3 {
+            color: #667eea;
+            margin-bottom: 8px;
+            font-size: 1.1rem;
+        }
+        
+        .link-card p {
+            color: #666;
+            font-size: 0.9rem;
+        }
+        
+        .footer {
+            background: #f8f9fa;
+            padding: 30px;
+            text-align: center;
+            color: #666;
+            border-top: 1px solid #e9ecef;
+        }
+        
+        .footer a {
+            color: #667eea;
             text-decoration: none;
         }
-        #linkList a:hover {
+        
+        .footer a:hover {
             text-decoration: underline;
+        }
+        
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .content {
+                padding: 20px;
+            }
+            
+            .links-grid {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
 <body>
-    <h1>Liinks!</h1>
-    
-    <form action="https://formsubmit.co/hi@mattmerrick.com" method="POST">
-        <input type="url" name="url" placeholder="https://example.com" required>
-        <input type="text" name="link_text" placeholder="Link text" required>
-        <textarea name="message" placeholder="Why should this link be added? (optional)"></textarea>
-        <button type="submit">Submit Link for Review</button>
-    </form>
+    <div class="container">
+        <div class="header">
+            <h1>Liiinks</h1>
+            <p>A curated directory of amazing websites</p>
+        </div>
+        
+        <div class="content">
+            <div class="embed-section">
+                <h2>🚀 Get Listed!</h2>
+                <p>Want to be featured in our directory? Copy the embed code below and add it to your website. Once we see it, we'll add your site to our list!</p>
+                
+                <div class="embed-code" id="embedCode">
+&lt;a href="https://liiinks.net" target="_blank"&gt;
+    &lt;svg width="120" height="40" viewBox="0 0 120 40" xmlns="http://www.w3.org/2000/svg"&gt;
+        &lt;rect width="120" height="40" rx="8" fill="#667eea"/&gt;
+        &lt;text x="60" y="25" font-family="Arial, sans-serif" font-size="12" fill="white" text-anchor="middle"&gt;Liiinks&lt;/text&gt;
+    &lt;/svg&gt;
+&lt;/a&gt;</div>
+                
+                <button class="copy-btn" onclick="copyEmbedCode()">Copy Embed Code</button>
+            </div>
+            
+            <div class="links-section">
+                <h2>Featured Sites</h2>
+                <div class="links-grid">
+                    <a href="https://nichetools.net" target="_blank" class="link-card">
+                        <h3>Niche Tools</h3>
+                        <p>Discover specialized tools for your niche</p>
+                    </a>
+                    
+                    <a href="https://mattmerrick.com" target="_blank" class="link-card">
+                        <h3>Matt Merrick</h3>
+                        <p>Personal website and portfolio</p>
+                    </a>
+                    
+                    <a href="https://llmlogs.com" target="_blank" class="link-card">
+                        <h3>LLM Logs</h3>
+                        <p>Logging and monitoring for LLM applications</p>
+                    </a>
+                    
+                    <a href="https://cite.sh" target="_blank" class="link-card">
+                        <h3>Cite.sh</h3>
+                        <p>Citation and reference management</p>
+                    </a>
+                    
+                    <a href="https://vibecoders.bio" target="_blank" class="link-card">
+                        <h3>Vibe Coders</h3>
+                        <p>Developer community and resources</p>
+                    </a>
+                    
+                    <a href="https://microsaasideas.net" target="_blank" class="link-card">
+                        <h3>Micro SaaS Ideas</h3>
+                        <p>Ideas and inspiration for micro SaaS businesses</p>
+                    </a>
+                    
+                    <a href="https://pmprompts.net" target="_blank" class="link-card">
+                        <h3>PM Prompts</h3>
+                        <p>Product management prompts and resources</p>
+                    </a>
+                    
+                    <a href="https://loremfaces.net" target="_blank" class="link-card">
+                        <h3>Lorem Faces</h3>
+                        <p>AI-generated faces for design projects</p>
+                    </a>
+                    
+                    <a href="https://theindiewall.net" target="_blank" class="link-card">
+                        <h3>The Indie Wall</h3>
+                        <p>Indie developer community and showcase</p>
+                    </a>
+                    
+                    <a href="https://buildtheidea.net" target="_blank" class="link-card">
+                        <h3>Build The Idea</h3>
+                        <p>Resources for building and launching ideas</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>Want to be featured? <a href="mailto:hello@liiinks.net">Contact us</a> or embed our link on your site!</p>
+        </div>
+    </div>
 
-    <nav>
-        <ul id="linkList">
-            <li><a href="https://pfpresizer.com" rel="dofollow">Pfpresizer</a></li>
-            <li><a href="https://chatgptresumeprompts.com" rel="dofollow">chatgptresumeprompts</a></li>
-            <li><a href="https://microsaasideas.net" rel="dofollow">microsaasideas</a></li>
-            <li><a href="https://csvtohtml.com" rel="dofollow">csv to html</a></li>
-            <li><a href="https://arebanksopentoday.com" rel="dofollow">Arebanksopentoday</a></li>
-            <li><a href="https://dailyaffirmationgenerator.com" rel="dofollow">dailyaffirmationgenerator</a></li>
-            <li><a href="https://rugsizecalculator.com" rel="dofollow">rug size calculator</a></li>
-            <li><a href="https://howmanydaystillblackfriday.com" rel="dofollow">How Many Days till Black Friday</a></li>
-            <li><a href="https://ezgradecalculator.com" rel="dofollow">Ez Grade Calculator</a></li>
-            <li><a href="https://keywordideas.co" rel="dofollow">Keyword Ideas</a></li>
-        </ul>
-    </nav>
-
-    <p>Submit <a href="https://liinks.net" rel="dofollow">liinks</a> for review. If approved, it will be added to the list.</p>
+    <script>
+        function copyEmbedCode() {
+            const embedCode = document.getElementById('embedCode').textContent;
+            navigator.clipboard.writeText(embedCode).then(function() {
+                const btn = document.querySelector('.copy-btn');
+                const originalText = btn.textContent;
+                btn.textContent = 'Copied!';
+                btn.style.background = '#48bb78';
+                
+                setTimeout(function() {
+                    btn.textContent = originalText;
+                    btn.style.background = '#667eea';
+                }, 2000);
+            }).catch(function(err) {
+                console.error('Could not copy text: ', err);
+                alert('Could not copy to clipboard. Please select and copy the code manually.');
+            });
+        }
+    </script>
 </body>
 </html>
