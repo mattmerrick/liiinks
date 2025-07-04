@@ -29,6 +29,7 @@ A simple, curated directory of amazing websites.
 
 ## Current Directory
 
+- [buildtheidea.net](https://buildtheidea.net) - Resources for building and launching ideas
 - [nichetools.net](https://nichetools.net) - Discover specialized tools for your niche
 - [mattmerrick.com](https://mattmerrick.com) - Personal website and portfolio
 - [llmlogs.com](https://llmlogs.com) - Logging and monitoring for LLM applications
@@ -38,7 +39,11 @@ A simple, curated directory of amazing websites.
 - [pmprompts.net](https://pmprompts.net) - Product management prompts and resources
 - [loremfaces.net](https://loremfaces.net) - AI-generated faces for design projects
 - [theindiewall.net](https://theindiewall.net) - Indie developer community and showcase
-- [buildtheidea.net](https://buildtheidea.net) - Resources for building and launching ideas
+- [freebudgettool.com](https://freebudgettool.com) - Free budgeting and financial planning tools
+- [whatisthepercent.com](https://whatisthepercent.com) - Calculate percentages and percentage changes
+- [tip-calculator.com](https://tip-calculator.com) - Easy tip calculation for restaurants and services
+- [csv.so](https://csv.so) - Online CSV to JSON converter and data tools
+- [startupdirectories.co](https://startupdirectories.co) - Directory of startup directories and resources
 
 ## Contact
 
