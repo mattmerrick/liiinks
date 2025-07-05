@@ -44,6 +44,9 @@ A simple, curated directory of amazing websites.
 - [tip-calculator.com](https://tip-calculator.com) - Easy tip calculation for restaurants and services
 - [csv.so](https://csv.so) - Online CSV to JSON converter and data tools
 - [startupdirectories.co](https://startupdirectories.co) - Directory of startup directories and resources
+- [keywordextractor.net](https://keywordextractor.net) - Extract keywords and analyze text content
+- [cmyktopantone.com](https://www.cmyktopantone.com) - Convert CMYK colors to Pantone with instant, accurate results
+- [pfpresizer.com](https://pfpresizer.com) - Resize and optimize profile pictures for social media
 
 ## Contact
 
