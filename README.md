@@ -49,6 +49,7 @@ A simple, curated directory of amazing websites.
 - [pfpresizer.com](https://pfpresizer.com) - Resize and optimize profile pictures for social media
 - [randomnumberapp.com](https://www.randomnumberapp.com) - Generate random numbers for lotteries, games, and decision-making
 - [dentalclinicclosetome.my](https://www.dentalclinicclosetome.my) - Malaysia's most trusted dental clinic directory with verified reviews
+- [auraplusplus.com](https://auraplusplus.com) - The ultimate profile builder for SEO & authority with do-follow backlinks
 
 ## Contact
 
